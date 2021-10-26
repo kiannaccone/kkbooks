@@ -11,8 +11,8 @@ function BookForm ({setBookList}) {
   });
 
   function handleChange(e) {
-    setNewBook((currentBook) => ({
-      ...currentBook, 
+    setNewBook((currentNewBook) => ({
+      ...currentNewBook, 
       [e.target.name] : e.target.value,
     }))
   }
@@ -36,12 +36,12 @@ function BookForm ({setBookList}) {
   })
     .then((res) => res.json())
     .then((data) =>
-        setNewBook((currentBook) => [...currentBook, data]),
-        setIsLoaded(true)
+      setBookList((currentBook) => [...currentBook, data]),
+        // setIsLoaded(true)
     );
   }
 
-  if (!isLoaded) return <h3>Loading ...</h3>
+  // if (!isLoaded) return <h3>Loading ...</h3>
 
   const genreOptions = [
     {value: 'fiction', text: 'fiction'},

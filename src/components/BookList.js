@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import {Route, Switch} from 'react-router-dom'
 import BookContainer from "./BookContainer";
 import BookDate from "./BookDate";
 import BookForm from "./BookForm";
@@ -7,7 +6,6 @@ import BookForm from "./BookForm";
 
 
 function BookList () {
-
 const [bookList, setBookList] = useState([]);
 const [search, setSearch] = useState("")
 
@@ -33,7 +31,7 @@ const filterBooks = bookList.filter(books => {
 
     return (
     <div>
-        <BookForm />
+        <BookForm setBookList={setBookList}/>
         <BookContainer books = {filterBooks} search={search} setSearch={setSearch}/>
         <BookDate />
     </div>
