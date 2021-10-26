@@ -1,17 +1,16 @@
 import { useState } from "react";
-import { Form } from "semantic-ui-react"
-
+import { Form } from "semantic-ui-react";
 
 function BookForm ({setBookList}) {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [newBook, setNewBook] = useState({
+      title:"",
+      author: "",
+      genre:"",
+      cover:""
+  });
 
-const [newBook, setNewBook] = useState({
-    title:"",
-    author: "",
-    genre:"",
-    cover:""
-});
-
-function handleChange(e) {
+  function handleChange(e) {
     setNewBook((currentBook) => ({
       ...currentBook, 
       [e.target.name] : e.target.value,
@@ -27,21 +26,31 @@ function handleChange(e) {
       cover: newBook.cover
     }
 
-fetch ("http://localhost:3000/books", {
+  fetch ("http://localhost:3000/books", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
         "Accept": "application/json",
     }, 
     body: JSON.stringify(book),
-})
+  })
     .then((res) => res.json())
     .then((data) =>
-        setNewBook((currentBook) => [...currentBook, data])
+        setNewBook((currentBook) => [...currentBook, data]),
+        setIsLoaded(true)
     );
-}
+  }
 
-return (
+  if (!isLoaded) return <h3>Loading ...</h3>
+
+  const genreOptions = [
+    {value: 'fiction', text: 'fiction'},
+    {value: 'nonfiction', text: 'nonfiction'},
+    {value: 'childrens', text: 'childrens'}
+  ]
+
+
+  return (
     <div>
       <h3>Add a Book!</h3>
       <Form
@@ -50,22 +59,23 @@ return (
         <Form.Group widths="equal">
           <Form.Input 
           fluid label="Title" 
-          placeholder="Title" 
-          name="Title" 
+          placeholder="title" 
+          name="title" 
           onChange = {handleChange}/>
           <Form.Input 
           fluid label="Author"
           placeholder="author" 
           name="author" 
           onChange = {handleChange} />
-          <Form.Input
-            fluid label="genre"
+          <Form.Select
+            fluid label="Genre"
             placeholder="genre"
             name="genre"
+            options={genreOptions}
             onChange = {handleChange}/>
           <Form.Input
-            fluid label="Image"
-            placeholder="cover"
+            fluid label="Book Cover"
+            placeholder="image"
             name="cover"
             onChange = {handleChange}
           />
@@ -74,6 +84,6 @@ return (
       </Form>
     </div>
   );
-}
+  }
 
 export default BookForm;
