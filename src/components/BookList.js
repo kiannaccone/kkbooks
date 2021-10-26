@@ -2,14 +2,14 @@ import {useState, useEffect} from 'react'
 import {Route, Switch} from 'react-router-dom'
 import BookContainer from "./BookContainer";
 import BookDate from "./BookDate";
-import Header from "./Header";
-import Form from "./Form";
-import BookCards from "./BookCards";
+import BookForm from "./BookForm";
+
 
 
 function BookList () {
 
 const [bookList, setBookList] = useState([]);
+const [search, setSearch] = useState("")
 
 useEffect(() => {
     fetch("http://localhost:3000/books")
@@ -18,12 +18,23 @@ useEffect(() => {
 }, [])
 
 
+const filterBooks = bookList.filter(books => {
+    return(
+        books.title.toLowerCase().includes(search.toLowerCase())
+        ||
+        books.author.toLowerCase().includes(search.toLowerCase())
+        ||
+        books.genre.toLowerCase().includes(search.toLowerCase())
+    )
+})
+
+
+
 
     return (
     <div>
-        <Header />
-        <Form />
-        <BookContainer books = {bookList}/>
+        <BookForm />
+        <BookContainer books = {filterBooks} search={search} setSearch={setSearch}/>
         <BookDate />
     </div>
     )

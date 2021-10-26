@@ -1,4 +1,5 @@
-function Search () {
+function Search ({search, setSearch}) {
+
     return (
         <div className="search">
         <label htmlFor="search">Search:</label>
@@ -7,8 +8,8 @@ function Search () {
             type="text"
             id="search"
             placeholder="Search..."
-            // value = {search}
-            // onChange={handleSearch}
+            value = {search}
+            onChange={(e) => setSearch(e.target.value)}
           />
         </div>
       );
