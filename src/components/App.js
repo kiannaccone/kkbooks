@@ -42,7 +42,7 @@ function App() {
         <BookForm setBookList={setBookList}/>
       </Route>
       <Route exact path="/date">
-        <BookDate />
+        <BookDate books= {bookList}/>
       </Route>
       </Switch>
     </div>

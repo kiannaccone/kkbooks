@@ -15,6 +15,7 @@ function BookForm ({setBookList}) {
       ...currentNewBook, 
       [e.target.name] : e.target.value,
     }))
+    console.log(e.target)
   }
 
   function handleSubmit (e) {
