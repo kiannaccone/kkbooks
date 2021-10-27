@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function NavBar () {
     return (
-    <NavWrap>
+    <div>
         <nav>
             <NavLink to ="/">Home</NavLink>
             <br/>
@@ -13,12 +13,9 @@ function NavBar () {
             <br/>
             <NavLink to ="/date">Book Date</NavLink>
         </nav>
-    </NavWrap>
+    </div>
     )
 }
 
 export default NavBar;
 
-const NavWrap = styled.div`
-
-`
