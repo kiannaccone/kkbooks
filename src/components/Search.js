@@ -1,3 +1,5 @@
+// import styled from 'styled-components';
+
 function Search ({search, setSearch}) {
 
     return (
@@ -16,3 +18,8 @@ function Search ({search, setSearch}) {
 }
 
 export default Search;
+
+// const SearchBar = styled.div`
+//   display: flex;
+//   float: center;
+// `

@@ -1,21 +1,20 @@
-import {NavLink} from 'react-router-dom'
-import styled from 'styled-components'
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 function NavBar () {
     return (
-    <div>
-        <nav>
+        <MenuBar>
             <NavLink to ="/">Home</NavLink>
-            <br/>
             <NavLink to ="/books">Book List</NavLink>
-            <br/>
             <NavLink to ="/form">Add A Book</NavLink>
-            <br/>
             <NavLink to ="/date">Book Date</NavLink>
-        </nav>
-    </div>
+        </MenuBar>
     )
 }
 
 export default NavBar;
 
+const MenuBar = styled.div`
+    disply: flex;
+    justify-content: space-evenly;
+`

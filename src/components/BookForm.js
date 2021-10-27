@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { Form } from "semantic-ui-react";
+import NewBookContainer from "./NewBookContainer";
+
+const genreOptions = [
+  {key: "fiction", value: "fiction", text: "fiction"},
+  {key: "nonfiction", value: "nonfiction", text: "nonfiction"},
+  {key: "childrens", value: "childrens", text: "childrens"}
+]
 
 function BookForm ({setBookList}) {
-  const [isLoaded, setIsLoaded] = useState(false)
+  // const [isLoaded, setIsLoaded] = useState(false)
   const [newBook, setNewBook] = useState({
       title:"",
       author: "",
-      genre:"",
+      genre: "",
       cover:""
   });
 
@@ -15,7 +22,7 @@ function BookForm ({setBookList}) {
       ...currentNewBook, 
       [e.target.name] : e.target.value,
     }))
-    console.log(e.target)
+    console.log(e.target.value)
   }
 
   function handleSubmit (e) {
@@ -42,14 +49,8 @@ function BookForm ({setBookList}) {
     );
   }
 
+
   // if (!isLoaded) return <h3>Loading ...</h3>
-
-  const genreOptions = [
-    {key:'fiction', value: 'fiction', text:"fiction"},
-    {key:'nonfiction', value: 'nonfiction', text: "nonfiction"},
-    {key:'childrens', value: 'childrens', text: "childrens"}
-  ]
-
 
   return (
     <div>
@@ -69,11 +70,13 @@ function BookForm ({setBookList}) {
           name="author" 
           onChange = {handleChange} />
           <Form.Select
-            fluid label="Genre"
+            fluid 
+            label="Genre"
             placeholder="genre"
             name="genre"
-            options={genreOptions}
-            onChange = {handleChange}/>
+            options={genreOptions} 
+            onChange={handleChange}
+            />
           <Form.Input
             fluid label="Book Cover"
             placeholder="image"
@@ -83,6 +86,7 @@ function BookForm ({setBookList}) {
         </Form.Group>
         <Form.Button>Submit</Form.Button>
       </Form>
+      <NewBookContainer newBook={newBook} handleSubmit={handleSubmit}/>
     </div>
   );
   }

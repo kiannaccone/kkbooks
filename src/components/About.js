@@ -1,6 +1,7 @@
 function About () {
     return (
     <div>
+        <img alt="library" src="public/long-room-trinity-college-dublin-most-beautiful-libraries-ireland-1024x768.jpeg"/>
         <h3>“That’s the thing about books. They let you travel without moving your feet.”
         <br/>
         Jhumpa Lahiri, <em>The Namesake</em></h3>
