@@ -5,8 +5,8 @@ function BookCards ({book : {title, author, genre, cover}}) {
         <Cards>
             <h3>{title}</h3> 
             <img src={cover} alt={title} /> 
-            <p> written by: {author}
-            <br/> genre: {genre}</p>
+            <p>Written by: {author}
+            <br/>Genre: {genre}</p>
         </Cards>
     );
 }
@@ -16,9 +16,9 @@ export default BookCards;
 const Cards = styled.div`
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     margin: 5rem;
+    width: 50%;
     border: 5px outset;
     img{
         width: 30%

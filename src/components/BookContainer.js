@@ -19,7 +19,8 @@ const bookCards = books.map((book) => <BookCards key={book.id} book = {book}/>);
 export default BookContainer;
 
 const CardContainer = styled.div`
-    coulum: 4;
-    flex-flow: column wrap;
-    padding-top: 20%;
+    display: grid;
+    list-style: none;
+    margin: 0;
+    grid-template-rows: repeat(3, auto);
 `

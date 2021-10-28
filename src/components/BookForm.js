@@ -2,14 +2,9 @@ import { useState } from "react";
 import { Form } from "semantic-ui-react";
 import NewBookContainer from "./NewBookContainer";
 
-const genreOptions = [
-  {key: "fiction", value: "fiction", text: "fiction"},
-  {key: "nonfiction", value: "nonfiction", text: "nonfiction"},
-  {key: "childrens", value: "childrens", text: "childrens"}
-]
 
 function BookForm ({setBookList}) {
-  // const [isLoaded, setIsLoaded] = useState(false)
+  const [bookAdd, setBookAdd] = useState([])
   const [newBook, setNewBook] = useState({
       title:"",
       author: "",
@@ -24,6 +19,8 @@ function BookForm ({setBookList}) {
     }))
     console.log(e.target.value)
   }
+
+
 
   function handleSubmit (e) {
     e.preventDefault()
@@ -43,14 +40,17 @@ function BookForm ({setBookList}) {
     body: JSON.stringify(book),
   })
     .then((res) => res.json())
-    .then((data) =>
-      setBookList((currentBook) => [data, ...currentBook]),
-        // setIsLoaded(true)
-    );
+    .then((data) => {
+      setBookList((currentBook) => [data, ...currentBook])
+      setNewBook({
+        title:"",
+        author: "",
+        genre: "",
+        cover:""
+    })
+    setBookAdd((data))
+    });
   }
-
-
-  // if (!isLoaded) return <h3>Loading ...</h3>
 
   return (
     <div>
@@ -60,33 +60,43 @@ function BookForm ({setBookList}) {
       >
         <Form.Group widths="equal">
           <Form.Input 
-          fluid label="Title" 
+          fluid 
+          label="Title" 
           placeholder="title" 
           name="title" 
+          value={newBook.title}
           onChange = {handleChange}/>
           <Form.Input 
-          fluid label="Author"
+          fluid 
+          label="Author"
           placeholder="author" 
           name="author" 
+          value={newBook.author}
           onChange = {handleChange} />
-          <Form.Select
+          <Form.Field onChange={handleChange}
+            control = "select"
             fluid 
             label="Genre"
             placeholder="genre"
             name="genre"
-            options={genreOptions} 
-            onChange={handleChange}
-            />
+            >
+            <option value=''>genre</option>
+            <option value='fiction'>Fiction</option>
+            <option value='nonfiction'>Nonfiction</option>
+            <option value='childrens'>Childrens</option>
+            </Form.Field>
           <Form.Input
-            fluid label="Book Cover"
+            fluid 
+            label="Book Cover"
             placeholder="image"
             name="cover"
+            value={newBook.cover}
             onChange = {handleChange}
           />
         </Form.Group>
         <Form.Button>Submit</Form.Button>
       </Form>
-      <NewBookContainer newBook={newBook} handleSubmit={handleSubmit}/>
+      <NewBookContainer bookAdd={bookAdd} />
     </div>
   );
   }

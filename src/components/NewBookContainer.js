@@ -1,11 +1,11 @@
-function NewBookContainer ({newBook, handleSubmit}) {
+function NewBookContainer ({bookAdd}) {
 
     const showNewBook = (
-        <div key= {newBook.id}> 
-        <h2>{newBook.title}</h2>
-        <p>{newBook.author}</p>
-        <p>{newBook.genre}</p>
-        <img src={newBook.cover} alt={newBook.title} /> 
+        <div key= {bookAdd.id}> 
+        <h2>{bookAdd.title}</h2>
+        <p>{bookAdd.author}</p>
+        <p>{bookAdd.genre}</p>
+        <img src={bookAdd.cover} alt={bookAdd.title} /> 
         </div> 
         );
 

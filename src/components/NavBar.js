@@ -17,4 +17,6 @@ export default NavBar;
 const MenuBar = styled.div`
     disply: flex;
     justify-content: space-evenly;
+    padding-bottom: 20%;
 `
+
