@@ -20,25 +20,39 @@ function BookDate ({books}) {
     }
 
     return (
-        <div>
-            <BigButton onClick={(e) => randomBook()} >Blind Date with a Book</BigButton>
+        <Container>
+            <BigButton onClick={(e) => randomBook()}>🖤 click me to have blind date with a book 🖤</BigButton>
             <Cards>{bookRec}</Cards>
-        </div>
+        </Container>
     );
 }
 
 export default BookDate;
 
+const Container = styled.div `
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+`
+
 
 const BigButton = styled.button `
     font-family: 'Libre Baskerville', serif;
-    width: 50%;
-    height: 50%;
+    font-size: 1.25em;
+    margin: 0.25em;
+    padding: 1em 1em;
+    border: 2px solid black;
+    border-radius: 3px;
+    object-positon: center;
+    align-self:center;
+
 `
 
 const Cards = styled.div`
-    margin 5rem;
-    width: 150px;
+    margin 3rem;
+    width: 400px;
     height: 50%;
     text-align:center;
     padding-right: 3em;
@@ -49,11 +63,11 @@ const Cards = styled.div`
         font-family: 'Libre Baskerville', serif;
         font-weight: bolder;
         color: black;
-        font-size: 100%
+        font-size: 130%
     }
     p{
         font-family: 'Libre Baskerville', serif;
         color: grey;
-        font-size: 85%
+        font-size: 100%
     }
 `

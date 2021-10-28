@@ -4,7 +4,7 @@ function Search ({search, setSearch}) {
 
     return (
         <SearchBar className="search">
-        <label htmlFor="search"> 🔎  </label>
+        <label htmlFor="search">🔎</label>
           <input
             className = "searchTerm"
             type="text"
@@ -27,6 +27,6 @@ const SearchBar = styled.div`
   font-size: 25px;
     .searchTerm{
       font-size: 20px;
-      width: 30%;
+      width: 25%;
     }
 `
