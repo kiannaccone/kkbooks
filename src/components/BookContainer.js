@@ -7,20 +7,31 @@ function BookContainer ({books, setSearch, search}) {
 const bookCards = books.map((book) => <BookCards key={book.id} book = {book}/>);
 
     return (
-        <CardContainer>
+        <div>
             <Search search={search} setSearch={setSearch} />
-            <ul className="cards">
+            <CardContainer className="cards">
             {bookCards}
-            </ul>
-        </CardContainer>
+            </CardContainer>
+        </div>
     )
 }
 
 export default BookContainer;
 
-const CardContainer = styled.div`
-    display: grid;
-    list-style: none;
-    margin: 0;
-    grid-template-rows: repeat(3, auto);
+ const CardContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // div: hover{
+    //     width:410px;
+    //     height: 160px;
+    }
 `
+
+// const CardContainer = styled.div`
+//     display: grid;
+//     float:left,
+//     flexDirection:'row',
+//     alignItems:'center',
+//     justifyContent:'center'
+// `

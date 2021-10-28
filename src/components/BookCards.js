@@ -3,10 +3,10 @@ import styled from 'styled-components';
 function BookCards ({book : {title, author, genre, cover}}) {
     return (
         <Cards>
-            <h3>{title}</h3> 
             <img src={cover} alt={title} /> 
-            <p>Written by: {author}
-            <br/>Genre: {genre}</p>
+            <h4>{title}</h4> 
+            <p><i>{author}</i></p>
+            {/* <br/>Genre: {genre}</p> */}
         </Cards>
     );
 }
@@ -14,17 +14,29 @@ function BookCards ({book : {title, author, genre, cover}}) {
 export default BookCards;
 
 const Cards = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5rem;
-    width: 50%;
-    border: 5px outset;
+    margin 5rem;
+    width: 150px;
+    height: 50%;
+    text-align:center;
+    border-right: 1px solid grey;
+    padding-right: 3em;
+    
+
+
     img{
-        width: 30%
+        width: 110%;
+    }
+    h4{
+        font-family: 'Libre Baskerville', serif;
+        font-weight: bolder;
+        color: black;
+        font-size: 100%
     }
     p{
-        padding: 3px;
-        text-align: center; 
+        font-family: 'Libre Baskerville', serif;
+        color: grey;
+        font-size: 85%
     }
+    
+
 `

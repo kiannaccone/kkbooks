@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "semantic-ui-react";
 import NewBookContainer from "./NewBookContainer";
+import styled from 'styled-components';
 
 
 function BookForm ({setBookList}) {
@@ -53,8 +54,7 @@ function BookForm ({setBookList}) {
   }
 
   return (
-    <div>
-      <h3>Add a Book!</h3>
+    <FormBook>
       <Form
         onSubmit= {handleSubmit} 
       >
@@ -81,9 +81,9 @@ function BookForm ({setBookList}) {
             name="genre"
             >
             <option value=''>genre</option>
-            <option value='fiction'>Fiction</option>
-            <option value='nonfiction'>Nonfiction</option>
-            <option value='childrens'>Childrens</option>
+            <option value='fiction'>fiction</option>
+            <option value='nonfiction'>nonfiction</option>
+            <option value='childrens'>childrens</option>
             </Form.Field>
           <Form.Input
             fluid 
@@ -96,9 +96,25 @@ function BookForm ({setBookList}) {
         </Form.Group>
         <Form.Button>Submit</Form.Button>
       </Form>
+      <h3>Please add your favorite book!</h3>
       <NewBookContainer bookAdd={bookAdd} />
-    </div>
+    </FormBook>
   );
   }
 
 export default BookForm;
+
+const FormBook = styled.div`
+font-family: 'Libre Baskerville', serif;
+form {
+  padding:3%;
+}
+
+  h3 {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    
+  }
+`
