@@ -21,24 +21,15 @@ const bookCards = books.map((book) => <BookCards key={book.id} book = {book}/>);
         </>
             </CardContainer>
         </div>
-     
     )
 }
 
-
-
-
 export default BookContainer;
 
-
- const CardContainer = styled.div`
+const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    // div: hover{
-    //     width:410px;
-    //     height: 160px;
-    }
 `
 
 const Quote = styled.div `
@@ -53,6 +44,5 @@ const Quote = styled.div `
     font-family: 'Libre Baskerville', serif;
     p{
         color:white
-        
     }
 `

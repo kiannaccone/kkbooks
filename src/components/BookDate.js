@@ -40,8 +40,6 @@ const Container = styled.div `
     align-items: center;
     
 `
-
-
 const BigButton = styled.button `
     font-family: 'Libre Baskerville', serif;
     font-size: 1.25em;
@@ -51,9 +49,7 @@ const BigButton = styled.button `
     border-radius: 3px;
     object-positon: center;
     align-self:center;
-
 `
-
 const Cards = styled.div`
     margin 3rem;
     width: 400px;
@@ -75,9 +71,7 @@ const Cards = styled.div`
         color: grey;
         font-size: 100%
     }
-
 `
-
 const Quote = styled.div `
     margin-top: 1rem;
     padding: 1rem;
@@ -88,5 +82,4 @@ const Quote = styled.div `
     left: 0;
     width: 100%;
     font-family: 'Libre Baskerville', serif;
-  
 `

@@ -18,10 +18,8 @@ const HomeStyle = styled.div`
     h1, h2 {
     font-family: 'Libre Baskerville', serif;
     }
-
-    font-family: 'Libre Baskerville', serif;
-    font-size: 20px;
-    padding: 6px;
-    text-align: center;
-    
+font-family: 'Libre Baskerville', serif;
+font-size: 20px;
+padding: 6px;
+text-align: center;
 `

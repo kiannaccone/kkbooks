@@ -21,8 +21,6 @@ function BookForm ({setBookList}) {
     console.log(e.target.value)
   }
 
-
-
   function handleSubmit (e) {
     e.preventDefault()
     const book = {
@@ -100,21 +98,19 @@ function BookForm ({setBookList}) {
       <NewBookContainer bookAdd={bookAdd} />
     </FormBook>
   );
-  }
+}
 
 export default BookForm;
 
 const FormBook = styled.div`
 font-family: 'Libre Baskerville', serif;
-form {
-  padding:3%;
-}
-
+  form {
+    padding:3%;
+  }
   h3 {
     font-size: 30px;
     color: black;
     text-align: center;
     font-family: 'Libre Baskerville', serif;
-    
   }
 `

@@ -20,9 +20,6 @@ const Cards = styled.div`
     text-align:center;
     border-right: 1px solid grey;
     padding-right: 3em;
-    
-
-
     img{
         width: 110%;
     }
@@ -37,6 +34,4 @@ const Cards = styled.div`
         color: grey;
         font-size: 85%
     }
-    
-
 `

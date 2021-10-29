@@ -3,12 +3,11 @@ import styled from 'styled-components';
 
 function Genre ({search, setSearch, value}) {
 
+  function handleChange (e) {
+      setSearch(e.target.innerText)
+  }
 
-function handleChange (e) {
-    setSearch(e.target.innerText)
-}
-
-return (
+  return (
     <FormGenre>
     <Form>
       <Form.Group widths='equal'>
@@ -36,9 +35,7 @@ return (
       </Form.Group>
     </Form>
     </FormGenre>
-    )
-
-   
+  )
 }
 
 export default Genre;
@@ -48,5 +45,4 @@ const FormGenre = styled.div `
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
-
 `

@@ -3,18 +3,18 @@ import styled from 'styled-components';
 function Search ({search, setSearch}) {
 
     return (
-        <SearchBar className="search">
-        <label htmlFor="search">🔎</label>
-          <input
-            className = "searchTerm"
-            type="text"
-            id="search"
-            placeholder=" Browse by books and authors..."
-            value = {search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </SearchBar>
-      );
+      <SearchBar className="search">
+      <label htmlFor="search">🔎</label>
+        <input
+          className = "searchTerm"
+          type="text"
+          id="search"
+          placeholder=" Browse by books and authors..."
+          value = {search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </SearchBar>
+    );
 }
 
 export default Search;

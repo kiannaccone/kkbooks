@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 function NewBookContainer ({bookAdd}) {
 
     const showNewBook = (
@@ -15,7 +14,7 @@ function NewBookContainer ({bookAdd}) {
             <p>“Reading one book is like eating one potato chip.”
                 ―Diane Duane, So You Want to Be a Wizard</p> </Quote>
         </>
-     );
+    );
 
     return (
     <div>{showNewBook}</div>
@@ -43,10 +42,7 @@ const Cards = styled.div`
         color: grey;
         font-size: 85%
     }
-    
-
 `
-
 const Quote = styled.div `
     margin-top: 1rem;
     padding: 1rem;
