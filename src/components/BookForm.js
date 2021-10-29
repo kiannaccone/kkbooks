@@ -3,7 +3,6 @@ import { Form } from "semantic-ui-react";
 import NewBookContainer from "./NewBookContainer";
 import styled from 'styled-components';
 
-
 function BookForm ({setBookList}) {
   const [bookAdd, setBookAdd] = useState([])
   const [newBook, setNewBook] = useState({
@@ -104,13 +103,13 @@ export default BookForm;
 
 const FormBook = styled.div`
 font-family: 'Libre Baskerville', serif;
-  form {
-    padding:3%;
-  }
-  h3 {
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    font-family: 'Libre Baskerville', serif;
-  }
+form {
+  padding:3%;
+}
+h3 {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+}
 `

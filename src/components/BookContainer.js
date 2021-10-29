@@ -15,7 +15,8 @@ const bookCards = books.map((book) => <BookCards key={book.id} book = {book}/>);
                 {bookCards}
                 <Quote>
                 <p>“I love the sound of the pages flicking against my fingers. Print against fingerprints. Books make people quiet, yet they are so loud.”
-                ―Nnedi Okorafor</p>
+                ―Justin Chittarath - Kelly's Brother</p>
+                {/* Nnedi Okorafor */}
                 </Quote>
             </CardContainer>
         </div>
@@ -25,23 +26,23 @@ const bookCards = books.map((book) => <BookCards key={book.id} book = {book}/>);
 export default BookContainer;
 
 const CardContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 4em;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding-bottom: 4em;
 `
 
 const Quote = styled.div `
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #720026;
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    font-family: 'Libre Baskerville', serif;
-    p{
-        color:white
-    }
+margin-top: 1rem;
+padding: 1rem;
+background-color: #720026;
+position: fixed;
+text-align: center;
+bottom: 0;
+left: 0;
+width: 100%;
+font-family: 'Libre Baskerville', serif;
+p{
+    color:white
+}
 `

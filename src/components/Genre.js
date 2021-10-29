@@ -41,8 +41,8 @@ function Genre ({search, setSearch, value}) {
 export default Genre;
 
 const FormGenre = styled.div `
-    padding-right: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
+padding-right: 5%;
+display: flex;
+flex-wrap: wrap;
+justify-content: right;
 `

@@ -24,36 +24,36 @@ function NewBookContainer ({bookAdd}) {
 export default NewBookContainer;
 
 const Cards = styled.div`
-    margin 5rem;
-    width: 300px;
-    height: 100%;
-    padding-bottom: 3em;
-    img{
-        width: 120%;
-    }
-    h4{
-        font-family: 'Libre Baskerville', serif;
-        font-weight: bolder;
-        color: black;
-        font-size: 100%
-    }
-    p{
-        font-family: 'Libre Baskerville', serif;
-        color: grey;
-        font-size: 85%
-    }
+margin 5rem;
+width: 300px;
+height: 100%;
+padding-bottom: 3em;
+img{
+    width: 120%;
+}
+h4{
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bolder;
+    color: black;
+    font-size: 100%
+}
+p{
+    font-family: 'Libre Baskerville', serif;
+    color: grey;
+    font-size: 85%
+}
 `
 const Quote = styled.div `
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #283618;
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    font-family: 'Libre Baskerville', serif;
-    p{
-        color: white;
-    }
+margin-top: 1rem;
+padding: 1rem;
+background-color: #283618;
+position: fixed;
+text-align: center;
+bottom: 0;
+left: 0;
+width: 100%;
+font-family: 'Libre Baskerville', serif;
+p{
+    color: white;
+}
 `

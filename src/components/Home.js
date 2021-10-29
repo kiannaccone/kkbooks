@@ -15,9 +15,9 @@ function Home () {
 export default Home;
 
 const HomeStyle = styled.div`
-    h1, h2 {
+h1, h2 {
     font-family: 'Libre Baskerville', serif;
-    }
+}
 font-family: 'Libre Baskerville', serif;
 font-size: 20px;
 padding: 6px;

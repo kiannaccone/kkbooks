@@ -27,5 +27,3 @@ li{
     font-size: 25px;
 } 
 `
-
-
