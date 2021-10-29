@@ -12,13 +12,11 @@ const bookCards = books.map((book) => <BookCards key={book.id} book = {book}/>);
             <Search search={search} setSearch={setSearch} />
             <Genre search={search} setSearch={setSearch}/>
             <CardContainer className="cards">
-            {bookCards}
-            <>
-        <Quote>
-            <p>“I love the sound of the pages flicking against my fingers. Print against fingerprints. Books make people quiet, yet they are so loud.”
-            ―Nnedi Okorafor</p>
-        </Quote>
-        </>
+                {bookCards}
+                <Quote>
+                <p>“I love the sound of the pages flicking against my fingers. Print against fingerprints. Books make people quiet, yet they are so loud.”
+                ―Nnedi Okorafor</p>
+                </Quote>
             </CardContainer>
         </div>
     )
@@ -30,6 +28,7 @@ const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-bottom: 4em;
 `
 
 const Quote = styled.div `

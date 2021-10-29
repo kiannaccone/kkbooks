@@ -27,7 +27,7 @@ const Cards = styled.div`
     margin 5rem;
     width: 300px;
     height: 100%;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
     img{
         width: 120%;
     }

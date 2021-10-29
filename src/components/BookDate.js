@@ -1,7 +1,6 @@
 import {useState} from 'react'
 import styled from 'styled-components';
 
-
 function BookDate ({books}) {
 
     const [bookLove, setBookLove] = useState({})
@@ -38,7 +37,7 @@ const Container = styled.div `
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    
+    font-family: 'Libre Baskerville', serif;
 `
 const BigButton = styled.button `
     font-family: 'Libre Baskerville', serif;
@@ -56,7 +55,8 @@ const Cards = styled.div`
     height: 50%;
     text-align:center;
     padding-right: 3em;
-    padding-bottom:2em;
+    padding-bottom: 4em;
+    font-family: 'Libre Baskerville', serif;
     img{
         width: 110%;
     }
