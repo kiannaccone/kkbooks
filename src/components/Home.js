@@ -6,6 +6,7 @@ function Home () {
         <HomeStyle>
             <h1>Welcome!</h1>
             <h2>Apparently you like books, funny, I do too.</h2>
+            <br/>
             <About />
         </HomeStyle>
     )

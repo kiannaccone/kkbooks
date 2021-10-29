@@ -23,7 +23,7 @@ const SearchBar = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
-  padding: 4%;
+  padding: 2%;
   font-size: 25px;
     .searchTerm{
       font-size: 20px;

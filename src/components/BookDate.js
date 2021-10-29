@@ -23,6 +23,10 @@ function BookDate ({books}) {
         <Container>
             <BigButton onClick={(e) => randomBook()}>🖤 click me to have blind date with a book 🖤</BigButton>
             <Cards>{bookRec}</Cards>
+            <Quote>
+                <p>“No. I can survive well enough on my own — if given the proper reading material.”
+                ―Sarah J. Maas, Throne of Glass</p>
+            </Quote>
         </Container>
     );
 }
@@ -56,6 +60,7 @@ const Cards = styled.div`
     height: 50%;
     text-align:center;
     padding-right: 3em;
+    padding-bottom:2em;
     img{
         width: 110%;
     }
@@ -70,4 +75,18 @@ const Cards = styled.div`
         color: grey;
         font-size: 100%
     }
+
+`
+
+const Quote = styled.div `
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #DDA15E;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'Libre Baskerville', serif;
+  
 `

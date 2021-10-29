@@ -25,8 +25,8 @@ const MenuBar = styled.ul`
         color:black;
         text-decoration: none;
         font-size: 25px;
-    }
-   }
+    } 
 
 `
+
 
