@@ -52,6 +52,7 @@ function BookForm ({setBookList}) {
 
   return (
     <FormBook>
+    <h3>Please add your favorite book!</h3>
       <Form
         onSubmit= {handleSubmit} 
       >
@@ -93,7 +94,6 @@ function BookForm ({setBookList}) {
         </Form.Group>
         <Form.Button>Submit</Form.Button>
       </Form>
-      <h3>Please add your favorite book!</h3>
       <NewBookContainer bookAdd={bookAdd} />
     </FormBook>
   );

@@ -15,8 +15,7 @@ const bookCards = books.map((book) => <BookCards key={book.id} book = {book}/>);
                 {bookCards}
                 <Quote>
                 <p>“I love the sound of the pages flicking against my fingers. Print against fingerprints. Books make people quiet, yet they are so loud.”
-                ―Justin Chittarath - Kelly's Brother</p>
-                {/* Nnedi Okorafor */}
+                ―Nnedi Okorafor</p>
                 </Quote>
             </CardContainer>
         </div>

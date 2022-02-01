@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-function BookCards ({book : {title, author, genre, cover}}) {
+function BookCards ({book : {title, author, cover}}) {
     return (
         <Cards>
             <img src={cover} alt={title} /> 

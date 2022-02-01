@@ -5,14 +5,16 @@ function NewBookContainer ({bookAdd}) {
     const showNewBook = (
         <>
             <Cards key= {bookAdd.id}> 
-            {/* <p>{bookAdd.genre}</p> */}
             <img src={bookAdd.cover} alt={bookAdd.title} /> 
             <h4>{bookAdd.title}</h4>
             <p><i>{bookAdd.author}</i></p>
-            </Cards> 
+            </Cards>
+            <br/>
+            <br/>
             <Quote>
             <p>“Reading one book is like eating one potato chip.”
-                ―Diane Duane, So You Want to Be a Wizard</p> </Quote>
+                ―Diane Duane, So You Want to Be a Wizard</p> 
+            </Quote>
         </>
     );
 
@@ -24,10 +26,12 @@ function NewBookContainer ({bookAdd}) {
 export default NewBookContainer;
 
 const Cards = styled.div`
-margin 5rem;
+margin-left: auto;
+margin-right: auto;
 width: 300px;
 height: 100%;
 padding-bottom: 3em;
+
 img{
     width: 120%;
 }

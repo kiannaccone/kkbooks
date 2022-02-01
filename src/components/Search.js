@@ -9,7 +9,7 @@ function Search ({search, setSearch}) {
           className = "searchTerm"
           type="text"
           id="search"
-          placeholder=" Browse by books and authors..."
+          placeholder=" Browse by books or authors..."
           value = {search}
           onChange={(e) => setSearch(e.target.value)}
         />

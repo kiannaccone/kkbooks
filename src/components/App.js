@@ -25,7 +25,7 @@ function App() {
         ||
         books.genre.toLowerCase().includes(search.toLowerCase())
     )
-})
+  })
 
   return (
     <div>
