@@ -12,7 +12,7 @@ function App() {
   const [search, setSearch] = useState("")
 
   useEffect(() => {
-    fetch("http://localhost:3000/books")
+    fetch("https://secret-anchorage-06066.herokuapp.com/books")
     .then((resp) => resp.json())
     .then(setBookList)
   }, [])

@@ -29,7 +29,7 @@ function BookForm ({setBookList}) {
       cover: newBook.cover
     }
 
-  fetch ("http://localhost:3000/books", {
+  fetch ("https://secret-anchorage-06066.herokuapp.com/books", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
