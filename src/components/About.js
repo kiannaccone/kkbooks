@@ -6,7 +6,7 @@ function About () {
     <div>
         <Image src={portugal} alt="library"/>
         <h3>
-            “That’s the thing about books. They let you travel without moving your feet.”
+            “That's the thing about books. They let you travel without moving your feet.”
             <br/>
             Jhumpa Lahiri, <em>The Namesake</em>
         </h3>

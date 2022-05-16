@@ -86,7 +86,7 @@ function BookForm ({setBookList}) {
           <Form.Input
             fluid 
             label="Book Cover"
-            placeholder="image"
+            placeholder="image url"
             name="cover"
             value={newBook.cover}
             onChange = {handleChange}
